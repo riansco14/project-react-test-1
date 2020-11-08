@@ -19,25 +19,29 @@
         "sourceType": "module"
     },
     "plugins": [
-        "react",
+		"react",
+		"react-hooks",
         "@typescript-eslint",
-        "prettier"
+		"prettier",
+		"import"
     ],
     "rules": {
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
-		"react/jsx-file-extension": [1, {"extension": [".tsx"]}],
-
-		"prettier/prettier":2,
+		"react/jsx-filename-extension": [1, { "extensions": [".ts", ".tsx"] }],
+		"prettier/prettier":["warn"],
+		"import/prefer-default-export": "off",
 		"import/extensions":[
 			"error",
 			"ignorePackages",
 			{
-				"ts": "never"
+				"ts": "never",
+				"tsx": "never"
 			}
 		],
 		"no-use-before-define": "off",
-  		"@typescript-eslint/no-use-before-define": ["error"]
+		"@typescript-eslint/no-use-before-define": ["error"],
+		"camelcase": "off"
 	},
 	"settings": {
 		"import/resolver":{
